@@ -15,6 +15,10 @@ router.post('/api/friends', function(req, res){
     let resultsArr = [];
     for (let i = 0; i < friends.length; i++) {
         let sum = friends[i].scores;
+        for (let l = 0; l < sum.length; l++) {
+            sum[l] = +sum[l];
+        }
+        console.log(sum);
         let value = sum.reduce(add);
         value = Math.abs(value);
         resultsArr.push(value)
