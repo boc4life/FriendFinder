@@ -302,6 +302,8 @@
                     console.log(response)
                     $("#responseName").html(response.name);
                     $("#responseImg").attr("src", response.photo);
+                    $("#responseImg").height("254");
+                    $("#responseImg").width("350");
                     $("#responseModal").modal("show");
                 })
             }
